@@ -1,15 +1,6 @@
 const router = require("express").Router();
-const [ notes ] = require('../../db/db.json');
+const notesRoute = require('../apiRoutes/notesRoute');
 
-
-router.get('/notes', (req, res) => {
-    if (notes) {
-        console.log("i am here");
-        res.json(notes);
-    }
-});
-
-
-
+router.use(notesRoute);
 
 module.exports = router;
