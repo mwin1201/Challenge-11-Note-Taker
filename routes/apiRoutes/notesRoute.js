@@ -1,7 +1,6 @@
 const router = require("express").Router();
 const notes = require('../../db/db.json');
-const writeFile = require('../../lib/notes');
-
+const { writeFile, findNote } = require('../../lib/notes');
 
 // get saved notes
 router.get('/notes', (req, res) => {
@@ -23,6 +22,23 @@ router.post('/notes', ({ body }, res) => {
         message: 'success',
         data: body
     });
+});
+
+// delete note with given id
+router.delete('/notes/:id', (req, res) => {
+    let id = req.params.id;
+    let noteExist = findNote(notes, id);
+    if (noteExist) {
+        res.json({
+            message: 'deleted',
+            data: id
+        });
+    }
+    else {
+        res.json({
+            message: 'no note found',
+        });
+    }
 });
 
 
