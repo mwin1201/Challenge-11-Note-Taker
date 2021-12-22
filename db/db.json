@@ -1,10 +1,1 @@
-[
-    {
-        "title":"Test Title",
-        "text":"Test text"
-    },
-    {
-        "title": "new title",
-        "text": "new text"
-    }
-]
+[{"title":"Test Title","text":"Test text"},{"title":"new title","text":"new text"},{"title":"Weekend plans","text":"nothing"},{"title":"Max Note","text":"New note"},{"title":"Evan Note","text":"For Max"}]
