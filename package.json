@@ -19,7 +19,8 @@
   },
   "homepage": "https://github.com/mwin1201/Challenge-11-Note-Taker#readme",
   "dependencies": {
-    "express": "^4.17.2"
+    "express": "^4.17.2",
+    "unique-string": "^3.0.0"
   },
   "devDependencies": {
     "jest": "^27.4.5"

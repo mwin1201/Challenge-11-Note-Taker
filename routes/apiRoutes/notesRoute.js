@@ -2,6 +2,7 @@ const router = require("express").Router();
 const notes = require('../../db/db.json');
 const writeFile = require('../../lib/notes');
 
+
 // get saved notes
 router.get('/notes', (req, res) => {
     let response = notes;
@@ -14,6 +15,7 @@ router.post('/notes', ({ body }, res) => {
         res.sendStatus(404);
         return;
     }
+    body.id = Math.floor(Math.random() * 10000);
     let response = notes;
     response.push(body);
     writeFile(JSON.stringify(response));
