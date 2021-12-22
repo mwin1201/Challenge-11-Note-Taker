@@ -2,6 +2,7 @@ const express = require("express");
 
 const PORT = process.env.PORT || 3001;
 const app = express();
+// add the api and HTML routes for improved readability
 const apiRoutes = require('./routes/apiRoutes');
 const htmlRoutes = require('./routes/htmlRoutes');
 

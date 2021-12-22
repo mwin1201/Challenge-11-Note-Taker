@@ -14,6 +14,7 @@ router.post('/notes', ({ body }, res) => {
         res.sendStatus(404);
         return;
     }
+    // give note unique ID
     body.id = Math.floor(Math.random() * 10000);
     let response = notes;
     response.push(body);
